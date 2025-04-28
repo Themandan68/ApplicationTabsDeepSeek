@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Tool PWA</title>
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="tab-container">
+            <button class="tab-button active" data-tab="tictactoe">Tic-Tac-Toe</button>
+            <button class="tab-button" data-tab="notes">Notes</button>
+            <button class="tab-button" data-tab="calculator">Calculator</button>
+        </div>
+
+        <div id="tictactoe" class="tab-content active">
+            <h2>Tic-Tac-Toe</h2>
+            <div class="game-container">
+                <div class="game-board" id="board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+                <div class="game-status" id="status">Player X's turn</div>
+                <button id="reset-game">Reset Game</button>
+            </div>
+        </div>
+
+        <div id="notes" class="tab-content">
+            <h2>Notes</h2>
+            <div class="notes-container">
+                <div class="notes-sidebar">
+                    <h3>Your Notes</h3>
+                    <button id="new-note">New Note</button>
+                    <ul id="notes-list"></ul>
+                </div>
+                <div class="notes-editor">
+                    <textarea id="note-editor" placeholder="Start writing your note here..."></textarea>
+                    <button id="save-note">Save Note</button>
+                    <button id="delete-note">Delete Note</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="calculator" class="tab-content">
+            <h2>Calculator</h2>
+            <div class="calculator">
+                <input type="text" class="calculator-screen" value="" disabled />
+                <div class="calculator-keys">
+                    <button type="button" class="operator" value="+">+</button>
+                    <button type="button" class="operator" value="-">-</button>
+                    <button type="button" class="operator" value="*">&times;</button>
+                    <button type="button" class="operator" value="/">&divide;</button>
+
+                    <button type="button" value="7">7</button>
+                    <button type="button" value="8">8</button>
+                    <button type="button" value="9">9</button>
+
+                    <button type="button" value="4">4</button>
+                    <button type="button" value="5">5</button>
+                    <button type="button" value="6">6</button>
+
+                    <button type="button" value="1">1</button>
+                    <button type="button" value="2">2</button>
+                    <button type="button" value="3">3</button>
+
+                    <button type="button" value="0">0</button>
+                    <button type="button" class="decimal" value=".">.</button>
+                    <button type="button" class="all-clear" value="all-clear">AC</button>
+
+                    <button type="button" class="equal-sign" value="=">=</button>
+                    <button type="button" class="operator" value="sqrt">√</button>
+                    <button type="button" class="operator" value="pow">^</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
